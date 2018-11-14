@@ -24,7 +24,7 @@
  }
  h2 {
  font-size: 1.75em;
- }
+  }
  h3 {
  font-size: 1.2em;
  }
@@ -57,21 +57,20 @@ register.</p>
  </form>
  <?php
 // DB connection info
-// TODO: Update the values for $host, $user, $pwd, and $db //using the values you retrieved
-////earlier from the Azure Portal. $host = "value of Data Source";
-//$host = "ruaplv-mysqldbserver.mysql.database.azure.com";
-//$user = "ruapUser@ruaplv-mysqldbserver";
+// TODO: Update the values for $host, $user, $pwd, and $db //using the values you retrievedearlier from the Azure Portal. $host = "value of Data Source";
+//$host = "localhost";
+//$user = "ruapUser";
 //$pwd = "UdCu.346";
-//$db = "ruapdb";
-$host = "localhost";
-$user = "efilipovic";
-$pwd = "test.123";
-$db = "ruaplv3";
+//$db = "registration_tbl";
+$host="ruaplv-mysqldbserver.mysql.database.azure.com";
+$user = "ruapUser@ruaplv-mysqldbserver";
+$pwd = "UdCu.346";
+$db = "ruapdb"
 // Connect to database.
 $conn = mysqli_connect($host, $user, $pwd, $db);
 if (mysqli_connect_errno())
 {
-echo "<h3>Failed to connect to MySQL:</h3> " . mysqli_connect_error();
+  echo "<h3>Failed to connect to MySQL:</h3> " . mysqli_connect_error();
 }
  else
 {
@@ -114,7 +113,7 @@ echo "<h3>No one is currently registered.</h3>";
 }
  else
 {
-echo "Insert Failed";
+  echo "Insert Failed";
 }
 }
 ?>

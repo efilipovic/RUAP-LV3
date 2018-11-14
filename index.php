@@ -24,48 +24,49 @@
  }
  h2 {
  font-size: 1.75em;
-  }
- h3 {
- font-size: 1.2em;
- }
- table {
- margin-top: 0.75em;
- }
- th {
- font-size: 1.2em;
- text-align: left;
- border: none;
- padding-left: 0;
- }
- td {
- padding: 0.25em 2em 0.25em 0em;
- border: 0 none;
- }
- </style>
+}
+h3 {
+font-size: 1.2em;
+}
+table {
+margin-top: 0.75em;
+}
+th {
+font-size: 1.2em;
+text-align: left;
+border: none;
+padding-left: 0;
+}
+td {
+padding: 0.25em 2em 0.25em 0em;
+border: 0 none;
+}
+</style>
 </head>
 <body>
- <h1>Register here!</h1>
- <p>Fill in your name and email address, then click <strong>Submit</strong> to
+<h1>Register here!</h1>
+<p>Fill in your name and email address, then click <strong>Submit</strong> to
 register.</p>
- <form method="post" action="index.php" enctype="multipart/form-data">
- Name
- <input type="text" name="name" id="name" />
- </br> Email
- <input type="text" name="email" id="email" />
- </br>
- <input type="submit" name="submit" value="Submit" />
- </form>
- <?php
+<form method="post" action="index.php" enctype="multipart/form-data">
+Name
+<input type="text" name="name" id="name" />
+</br> Email
+<input type="text" name="email" id="email" />
+</br>
+<input type="submit" name="submit" value="Submit" />
+</form>
+<?php
 // DB connection info
-// TODO: Update the values for $host, $user, $pwd, and $db //using the values you retrievedearlier from the Azure Portal. $host = "value of Data Source";
-//$host = "localhost";
-//$user = "ruapUser";
-//$pwd = "UdCu.346";
-//$db = "registration_tbl";
+// TODO: Update the values for $host, $user, $pwd, and $db //using the values you retrieved
+//earlier from the Azure Portal. $host = "value of Data Source";
 $host="ruaplv-mysqldbserver.mysql.database.azure.com";
 $user = "ruapUser@ruaplv-mysqldbserver";
 $pwd = "UdCu.346";
 $db = "ruapdb"
+//$host="localhost";
+//$user = "efilipovic";
+//$pwd = "test.123";
+//$db = "ruaplv3"
 // Connect to database.
 $conn = mysqli_connect($host, $user, $pwd, $db);
 if (mysqli_connect_errno())
